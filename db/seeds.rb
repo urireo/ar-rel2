@@ -64,14 +64,17 @@ college_class.instructor="Schmidt"
 college_class.save
 
 student = Student.find_by(name: "Frank")
+
 student_class = StudentClass.new
 student_class.student=student
 student_class.college_class = CollegeClass.find_by(name: "Algebra")
 student_class.save
+
 sc = StudentClass.new
 sc.student=student
 sc.college_class = CollegeClass.find_by(name: "Business")
 sc.save
+
 sc = StudentClass.new
 sc.student=student
 sc.college_class = CollegeClass.find_by(name: "Bowling")

@@ -1,0 +1,15 @@
+<h4><p>Student id: <%= @student.id%> </p>
+<p>Student Name: <%= @student.name %></p>
+<p>Student email: <%= @student.email %></p>
+This student is enrolled in the following classes:
+</h4>
+<ul>
+    <% classes_for_this_student = @student.college_classes %> 
+    <%classes_for_this_student.each do |sc| %>
+        <li><%= sc.name %></li>
+    <%end%>
+    
+</ul>
+
+<a href="/ac">See all Classes</a><br>
+<a href="/s">See all Students</a>

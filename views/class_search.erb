@@ -1,0 +1,7 @@
+<h3>List of Classes</h3>
+ <% @classes_array.each do |c_record| %>
+    </p>
+        <%= c_record.id.to_s + " |   Name:" +  c_record.name  +   "    "  %>
+        <a href= "/display_class/<%= c_record.id %>"> Search </a>
+    </p>
+ <%end %>

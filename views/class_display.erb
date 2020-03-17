@@ -1,0 +1,15 @@
+<h4><p>Class id: <%= @specific_class.id%> </p>
+<p>Class Name: <%= @specific_class.name %></p>
+<p>Class Instructor: <%= @specific_class.instructor %></p>
+The following student are enrolled in this class:
+</h4>
+<ul>
+    <% students_in_this_class = @specific_class.students %> 
+    <%students_in_this_class.each do |sic| %>
+        <li><%= sic.name %></li>
+    <%end%>
+    
+</ul>
+
+<a href="/ac">See all Classes</a><br>
+<a href="/s">See all Students</a>

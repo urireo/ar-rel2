@@ -1,0 +1,7 @@
+<h3>List of Students</h3>
+ <% @students_array.each do |s_record| %>
+    </p>
+        <%= s_record.id.to_s + " |   Name:" +  s_record.name  +   "    "  %>
+        <a href= "/display_student/<%= s_record.id %>"> Search </a>
+    </p>
+ <%end %>
